@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="clickHandler"
+            type="com.ps.webskitterassignment.activity.LoginActivity.LoginClickHandler" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/_30sdp"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+            android:gravity="center">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etUserNameLogin"
+                    android:hint="@string/txtEmailId"
+                    android:textSize="@dimen/_9sdp"
+                    android:inputType="text"
+                    android:text="eve.holt@reqres.in"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etPasswordLogin"
+                    android:hint="@string/txtPassword"
+                    android:textSize="@dimen/_9sdp"
+                    android:inputType="textPassword"
+                    android:text="cityslicka"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/txtLogin"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_blue_round_corner"
+                android:textSize="@dimen/_9sdp"
+                android:onClick="@{clickHandler::onLoginClicked}"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WebSkitterAssignment</string>
+    <string name="txtNetworkNotAvailable">Network not available</string>
+    <string name="txtAssignment">Assignment</string>
+    <string name="txtEmailId">Email ID</string>
+    <string name="txtPassword">Password</string>
+    <string name="txtLogin">Login</string>
+    <string name="txtCantEmpty">can not be empty</string>
+    <string name="txtLoading">Loading</string>
+</resources>

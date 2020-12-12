@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="txtAssignment">Assignment</string>
+    <string name="txtEmailId">Email ID</string>
+    <string name="txtPassword">Password</string>
+    <string name="txtLogin">Login</string>
+</resources>
