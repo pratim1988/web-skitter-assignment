@@ -41,7 +41,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/etPasswordLogin"
+                android:id="@+id/etPasswordProfile"
                 android:hint="@string/txtPassword"
                 android:textSize="@dimen/_9sdp"
                 android:inputType="textPassword"/>
@@ -50,6 +50,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/btnSubmitProfile"
             android:layout_marginTop="@dimen/_20sdp"
             android:padding="@dimen/_5sdp"
             android:text="@string/txtLogin"

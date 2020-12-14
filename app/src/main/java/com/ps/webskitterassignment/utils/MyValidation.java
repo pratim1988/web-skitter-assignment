@@ -21,11 +21,11 @@ public class MyValidation {
             is_error = true;
             Toast.makeText(context,context.getResources().getString(R.string.txtEmailId)+" "+
                     context.getResources().getString(R.string.txtCantEmpty), Toast.LENGTH_SHORT).show();
-        }/*else if(!isValidEmail(userName)){
+        }else if(!isValidEmail(userName)){
             is_error = true;
-            Toast.makeText(context,context.getResources().getString(R.string.txtEmailOrUserName)+" "+
-                    context.getResources().getString(R.string.txtNotValid),Toast.LENGTH_SHORT).show();
-        }*/else if (pwd.toString().trim().length() == 0) {
+            Toast.makeText(context,context.getResources().getString(R.string.txtEmailId)+" "+
+                    "Not valid",Toast.LENGTH_SHORT).show();
+        }else if (pwd.toString().trim().length() == 0) {
             is_error = true;
             Toast.makeText(context,context.getResources().getString(R.string.txtPassword)+" "+
                     context.getResources().getString(R.string.txtCantEmpty), Toast.LENGTH_SHORT).show();

@@ -17,6 +17,10 @@ public interface APIInterface {
     @Headers({"Content-Type: application/json"})
     Call<LoginResponse> userLogin(@Body Map<String, Object> data);
 
+    @POST(Urls.URL_REGISTER)
+    @Headers({"Content-Type: application/json"})
+    Call<JSONObject> userRegister(@Body Map<String, Object> data);
+
     @GET(Urls.URL_USER_LIST)
     @Headers({"Content-Type: application/json"})
     Call<UserListResponse> userList();
