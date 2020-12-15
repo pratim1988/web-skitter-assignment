@@ -7,6 +7,7 @@ public interface Urls {
 
     String URL_LOGIN = "login/";
     String URL_REGISTER = "register/";
+    String URL_UPDATE = "users/2";
     String URL_USER_LIST = "users?page=1";
 
 }

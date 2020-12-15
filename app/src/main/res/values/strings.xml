@@ -7,4 +7,6 @@
     <string name="txtLogin">Login</string>
     <string name="txtCantEmpty">can not be empty</string>
     <string name="txtLoading">Loading</string>
+    <string name="txtName">Name</string>
+    <string name="txtJob">Job</string>
 </resources>

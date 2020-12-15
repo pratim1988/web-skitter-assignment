@@ -11,15 +11,16 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 
 public interface APIInterface {
     @POST(Urls.URL_LOGIN)
     @Headers({"Content-Type: application/json"})
     Call<LoginResponse> userLogin(@Body Map<String, Object> data);
 
-    @POST(Urls.URL_REGISTER)
+    @PUT(Urls.URL_UPDATE)
     @Headers({"Content-Type: application/json"})
-    Call<JSONObject> userRegister(@Body Map<String, Object> data);
+    Call<JSONObject> userUpdate(@Body Map<String, Object> data);
 
     @GET(Urls.URL_USER_LIST)
     @Headers({"Content-Type: application/json"})

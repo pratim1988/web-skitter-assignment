@@ -89,9 +89,9 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (AppUtilities.isOnline(getActivity())) {
-                    if (new MyValidation(getActivity()).validateLogin(binding.etUserNameProfile.getText().toString().trim(),
-                            binding.etPasswordProfile.getText().toString())) {
-                        callRegisterApi();
+                    if (new MyValidation(getActivity()).validateUpdate(binding.etUserNameProfile.getText().toString().trim(),
+                            binding.etJobProfile.getText().toString())) {
+                        callUpdateApi();
                     }
                 } else {
                     Toast.makeText(getActivity(), getResources().getString(R.string.txtNetworkNotAvailable), Toast.LENGTH_SHORT).show();
@@ -101,23 +101,23 @@ public class ProfileFragment extends Fragment {
         return binding.getRoot();
     }
 
-    private void callRegisterApi() {
+    private void callUpdateApi() {
         ((BaseActivity) getActivity()).showProgressDialog(getActivity(), getResources().getString(R.string.txtLoading));
         HashMap<String, Object> logReq = new HashMap<>();
         logReq.put("email", binding.etUserNameProfile.getText().toString().trim());
-        logReq.put("password", binding.etPasswordProfile.getText().toString());
-        Call<JSONObject> response1 = APIClient.getClient().create(APIInterface.class).userRegister(logReq);
+        logReq.put("password", binding.etJobProfile.getText().toString());
+        Call<JSONObject> response1 = APIClient.getClient().create(APIInterface.class).userUpdate(logReq);
         response1.enqueue(new Callback<JSONObject>() {
             @Override
             public void onResponse(Call<JSONObject> call, Response<JSONObject> response) {
                 ((BaseActivity) getActivity()).hideProgressDialog();
                 if (response.code() == 200) {
-                    Toast.makeText(getActivity(), "Register Successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Update Successfully", Toast.LENGTH_SHORT).show();
                     binding.etUserNameProfile.setText("");
-                    binding.etPasswordProfile.setText("");
+                    binding.etJobProfile.setText("");
                     binding.ivPicUser.setImageResource(R.drawable.dummy_circle_profile);
                 }else{
-                    Toast.makeText(getActivity(), "Register not Successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Update not Successfully", Toast.LENGTH_SHORT).show();
                 }
 
             }

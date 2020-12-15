@@ -37,6 +37,24 @@ public class MyValidation {
         }
     }
 
+    public boolean validateUpdate(String userName, String job) {
+        Boolean is_error = false;
+        if (userName.toString().trim().length() == 0) {
+            is_error = true;
+            Toast.makeText(context,context.getResources().getString(R.string.txtName)+" "+
+                    context.getResources().getString(R.string.txtCantEmpty), Toast.LENGTH_SHORT).show();
+        }else if (job.toString().trim().length() == 0) {
+            is_error = true;
+            Toast.makeText(context,context.getResources().getString(R.string.txtJob)+" "+
+                    context.getResources().getString(R.string.txtCantEmpty), Toast.LENGTH_SHORT).show();
+        }
+        if (!is_error) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     Boolean isValidEmail(CharSequence target) {
         if (TextUtils.isEmpty(target)) {
             return false;

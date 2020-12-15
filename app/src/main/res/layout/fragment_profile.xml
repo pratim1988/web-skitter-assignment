@@ -26,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etUserNameProfile"
-                android:hint="@string/txtEmailId"
+                android:hint="@string/txtName"
                 android:textSize="@dimen/_9sdp"
                 android:inputType="text"/>
 
@@ -41,10 +41,10 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/etPasswordProfile"
-                android:hint="@string/txtPassword"
+                android:id="@+id/etJobProfile"
+                android:hint="@string/txtJob"
                 android:textSize="@dimen/_9sdp"
-                android:inputType="textPassword"/>
+                android:inputType="text"/>
 
         </com.google.android.material.textfield.TextInputLayout>
         <androidx.appcompat.widget.AppCompatButton
